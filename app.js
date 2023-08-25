@@ -11,7 +11,10 @@ app.use(express.urlencoded());
 const API_KEY = process.env.API_KEY;
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", process.env.CLIENT_URL);
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://tubular-nasturtium-17ad4b.netlify.app"
+  );
   res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
   res.header(
     "Access-Control-Allow-Headers",
